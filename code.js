@@ -17,6 +17,15 @@ function binarySearch(list, element)
 {
     let mid = Math.floor(list.length/2);
 
+    if (list.length == 1 && list[0] == element)
+    {
+        return mid;
+    }
+    if (list.length == 1 && list[0] != element)
+    {
+        return -1;
+    }
+
     if(list.length == 0) // base case
     {
         return -1; // element not found, return -1
